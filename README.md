@@ -79,7 +79,6 @@
 ![Processing](screenshots/processing.jpg)  
 
 ---
+## Changes after Mentor Suggestions : 
 
-💡 **Next Steps:** (Add what’s next in development if needed!)  
-
-📢 Let me know if you want any changes! 🚀  
+ Implemented RAG for health premium adjustment based on health data .
