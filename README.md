@@ -1,4 +1,4 @@
-# 🚀 AI-Driven Insurance Optimization
+# 🚀 InsurAI
 
 ## 📌 Key Features
 
