@@ -78,7 +78,7 @@
 ### 🔍 Competitor Analysis  
 ![Competitor](screenshots/competitor.jpg)  
 
-### ⚙️ Processing  
+### ⚙️ Claim Processing  
 ![Processing](screenshots/processing.jpg)  
 
 ---
