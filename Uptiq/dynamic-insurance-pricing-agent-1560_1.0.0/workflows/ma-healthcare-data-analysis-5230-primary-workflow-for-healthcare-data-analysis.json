@@ -1,0 +1,413 @@
+{
+  "_id": "f784e08c-56bc-450f-a884-c2775ad16d6a",
+  "aiPersonaId": "8192d59a-3a33-410d-9f16-9b3935c41661",
+  "integrationId": "ma-healthcare-data-analysis-5230-primary-workflow-for-healthcare-data-analysis",
+  "isMiniAgentPrimaryWorkflow": true,
+  "name": "Primary Workflow for Healthcare Data Analysis",
+  "publisherAccountId": "258952ca-ba71-4351-ab37-647c59176875",
+  "startTaskId": "7fbd2c53-5368-4f84-9d34-e58c1e001861",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "7fbd2c53-5368-4f84-9d34-e58c1e001861",
+      "type": "PassThrough",
+      "config": {
+        "name": "Pass Through",
+        "description": "Pass through the input to the output"
+      },
+      "transitions": [
+        {
+          "_id": "207ce280-f701-42cb-9026-e16b9399e45e-7fbd2c53-5368-4f84-9d34-e58c1e001861",
+          "nextTask": "207ce280-f701-42cb-9026-e16b9399e45e",
+          "name": "If query doesnt exists",
+          "rules": [
+            {
+              "type": "any",
+              "operator": "notExists",
+              "path": "$output.query"
+            }
+          ]
+        },
+        {
+          "_id": "d98f861d-9df8-4284-8a79-7d21d42a6a82-7fbd2c53-5368-4f84-9d34-e58c1e001861",
+          "nextTask": "d98f861d-9df8-4284-8a79-7d21d42a6a82",
+          "name": "If intents are already classified",
+          "rules": [
+            {
+              "type": "any",
+              "operator": "exists",
+              "path": "$output.intents"
+            },
+            {
+              "type": "any",
+              "operator": "exists",
+              "path": "$output.query"
+            }
+          ]
+        },
+        {
+          "_id": "7fbd2c53-5368-4f84-9d34-e58c1e001861-7e12251c-e47e-4ad4-a0de-a0c2ca2bca16",
+          "name": "If query exists",
+          "nextTask": "7e12251c-e47e-4ad4-a0de-a0c2ca2bca16",
+          "rules": [
+            {
+              "type": "any",
+              "operator": "exists",
+              "path": "$output.query"
+            },
+            {
+              "type": "any",
+              "operator": "notExists",
+              "path": "$output.intents"
+            }
+          ]
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "query",
+          "referencePath": "$input.query"
+        },
+        {
+          "name": "rawQuery",
+          "referencePath": "$input.rawQuery"
+        },
+        {
+          "name": "conversationId",
+          "referencePath": "$input.conversationId"
+        }
+      ]
+    },
+    {
+      "_id": "207ce280-f701-42cb-9026-e16b9399e45e",
+      "type": "Input",
+      "config": {
+        "name": "User Input",
+        "description": "Get user input",
+        "type": "string"
+      },
+      "transitions": [
+        {
+          "_id": "207ce280-f701-42cb-9026-e16b9399e45e-7e12251c-e47e-4ad4-a0de-a0c2ca2bca16",
+          "name": "Default",
+          "nextTask": "7e12251c-e47e-4ad4-a0de-a0c2ca2bca16"
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "query",
+          "referencePath": "$output.userInput"
+        },
+        {
+          "name": "rawQuery",
+          "referencePath": "$output.userInput"
+        },
+        {
+          "name": "selfLoopMiniAgent",
+          "referencePath": "true"
+        }
+      ]
+    },
+    {
+      "_id": "7e12251c-e47e-4ad4-a0de-a0c2ca2bca16",
+      "type": "Loader",
+      "config": {
+        "name": "Loader",
+        "description": "Display loader message",
+        "type": "loader",
+        "text": "Just a moment... identifying the best approach to assist you."
+      },
+      "transitions": [
+        {
+          "_id": "7e12251c-e47e-4ad4-a0de-a0c2ca2bca16-d0e0aa5c-d8bc-4dbf-a89d-088499f7540d",
+          "name": "Default",
+          "nextTask": "d0e0aa5c-d8bc-4dbf-a89d-088499f7540d"
+        }
+      ]
+    },
+    {
+      "_id": "d0e0aa5c-d8bc-4dbf-a89d-088499f7540d",
+      "type": "IntentClassification",
+      "config": {
+        "name": "Intent Classification",
+        "description": "Classify the intent of the user message",
+        "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b",
+        "intents": [
+          {
+            "name": "Evaluate Fitness Level",
+            "description": "Assesses the fitness level of individuals based on their healthcare data, including metrics like BMI, exercise frequency, and dietary habits.",
+            "examples": [
+              "How fit am I based on my recent health check-up?",
+              "Evaluate my fitness level using my health data.",
+              "What does my exercise routine say about my fitness?"
+            ]
+          },
+          {
+            "name": "Analyze Medical History",
+            "description": "Reviews an individual's medical history to identify any pre-existing conditions or health risks that may affect insurance pricing.",
+            "examples": [
+              "Does my medical history affect my insurance premium?",
+              "Analyze my past medical records for insurance purposes.",
+              "What health risks are present in my medical history?"
+            ]
+          },
+          {
+            "name": "Lifestyle Assessment",
+            "description": "Examines lifestyle factors such as smoking, alcohol consumption, and stress levels to determine their impact on health and insurance pricing.",
+            "examples": [
+              "How does my lifestyle affect my insurance discount?",
+              "Assess my lifestyle for insurance pricing.",
+              "What impact does my smoking habit have on my insurance?"
+            ]
+          },
+          {
+            "name": "Calculate Insurance Discount",
+            "description": "Calculates the maximum possible discount on insurance premiums based on the individual's fitness level and health data analysis.",
+            "examples": [
+              "What discount can I get on my insurance based on my health data?",
+              "Calculate my insurance discount using my fitness level.",
+              "How much can I save on insurance with my current health status?"
+            ]
+          }
+        ],
+        "query": "$agent.query"
+      },
+      "transitions": [
+        {
+          "_id": "d0e0aa5c-d8bc-4dbf-a89d-088499f7540d-d98f861d-9df8-4284-8a79-7d21d42a6a82",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intentMatched",
+              "value": "true"
+            }
+          ],
+          "nextTask": "d98f861d-9df8-4284-8a79-7d21d42a6a82"
+        },
+        {
+          "_id": "d0e0aa5c-d8bc-4dbf-a89d-088499f7540d-b8e4801a-eaab-40fc-abaa-90a677b46694",
+          "name": "If No Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intentMatched",
+              "value": "false"
+            }
+          ],
+          "nextTask": "b8e4801a-eaab-40fc-abaa-90a677b46694"
+        }
+      ]
+    },
+    {
+      "_id": "d98f861d-9df8-4284-8a79-7d21d42a6a82",
+      "type": "JSFunction",
+      "config": {
+        "name": "JS Function",
+        "description": "Execute JS function",
+        "code": "\nconst main = () => {\n    const currentExecutionId = _id;\n    const intents = agent?.icIntents?.[currentExecutionId] || input.intents;\n    const currentIndex = agent?.icLoopIndexes?.[currentExecutionId] || 0;\n    const currentIntent = intents[currentIndex] || {};\n    const { intent, task } = currentIntent;\n    const state = currentIndex === intents.length ? 'end' : 'continue'\n    const icLoopIndexes = { ...(agent?.icLoopIndexes || {}), [_id]: state === 'end' ? undefined : currentIndex + 1 };\n    const icIntents = { ...(agent?.icIntents || {}), [_id]: state === 'end' ? undefined : intents };\n    return { ...input, intent, state: currentIndex === intents.length ? 'end' : 'continue', icLoopIndexes, icIntents, query: task };\n};\n\nmain()\n"
+      },
+      "globalVariables": [
+        {
+          "referencePath": "$output.icLoopIndexes",
+          "name": "icLoopIndexes"
+        },
+        {
+          "referencePath": "$output.icIntents",
+          "name": "icIntents"
+        }
+      ],
+      "transitions": [
+        {
+          "_id": "d98f861d-9df8-4284-8a79-7d21d42a6a82-faaac96d-10f8-49b9-bdce-7d27c585e00c",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intent",
+              "value": "Evaluate Fitness Level"
+            }
+          ],
+          "nextTask": "faaac96d-10f8-49b9-bdce-7d27c585e00c"
+        },
+        {
+          "_id": "d98f861d-9df8-4284-8a79-7d21d42a6a82-07fc57ac-fc71-46ec-9872-0188ce250d3d",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intent",
+              "value": "Analyze Medical History"
+            }
+          ],
+          "nextTask": "07fc57ac-fc71-46ec-9872-0188ce250d3d"
+        },
+        {
+          "_id": "d98f861d-9df8-4284-8a79-7d21d42a6a82-02920fdc-1441-407d-9281-8d340efb0e7d",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intent",
+              "value": "Lifestyle Assessment"
+            }
+          ],
+          "nextTask": "02920fdc-1441-407d-9281-8d340efb0e7d"
+        },
+        {
+          "_id": "d98f861d-9df8-4284-8a79-7d21d42a6a82-d58c6580-8e6f-4ddb-83b2-5e8650ce5d15",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intent",
+              "value": "Calculate Insurance Discount"
+            }
+          ],
+          "nextTask": "d58c6580-8e6f-4ddb-83b2-5e8650ce5d15"
+        },
+        {
+          "_id": "d98f861d-9df8-4284-8a79-7d21d42a6a82-207ce280-f701-42cb-9026-e16b9399e45e",
+          "name": "If Self Loop",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$agent.selfLoopMiniAgent",
+              "value": "true"
+            },
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.state",
+              "value": "end"
+            }
+          ],
+          "nextTask": "207ce280-f701-42cb-9026-e16b9399e45e"
+        }
+      ]
+    },
+    {
+      "_id": "faaac96d-10f8-49b9-bdce-7d27c585e00c",
+      "type": "Workflow",
+      "config": {
+        "name": "Intent - Evaluate Fitness Level",
+        "description": "Workflow for intent - Evaluate Fitness Level",
+        "workflowId": "7db4346a-25da-451c-8970-b6b7c4771158"
+      },
+      "transitions": [
+        {
+          "_id": "faaac96d-10f8-49b9-bdce-7d27c585e00c-d98f861d-9df8-4284-8a79-7d21d42a6a82",
+          "name": "Mini agent execution completed",
+          "nextTask": "d98f861d-9df8-4284-8a79-7d21d42a6a82"
+        }
+      ]
+    },
+    {
+      "_id": "07fc57ac-fc71-46ec-9872-0188ce250d3d",
+      "type": "Workflow",
+      "config": {
+        "name": "Intent - Analyze Medical History",
+        "description": "Workflow for intent - Analyze Medical History",
+        "workflowId": "691440ed-f592-4620-bc50-56644432ba33"
+      },
+      "transitions": [
+        {
+          "_id": "07fc57ac-fc71-46ec-9872-0188ce250d3d-d98f861d-9df8-4284-8a79-7d21d42a6a82",
+          "name": "Mini agent execution completed",
+          "nextTask": "d98f861d-9df8-4284-8a79-7d21d42a6a82"
+        }
+      ]
+    },
+    {
+      "_id": "02920fdc-1441-407d-9281-8d340efb0e7d",
+      "type": "Workflow",
+      "config": {
+        "name": "Intent - Lifestyle Assessment",
+        "description": "Workflow for intent - Lifestyle Assessment",
+        "workflowId": "55be875d-6ab5-421b-821c-0cc8c2afaaa8"
+      },
+      "transitions": [
+        {
+          "_id": "02920fdc-1441-407d-9281-8d340efb0e7d-d98f861d-9df8-4284-8a79-7d21d42a6a82",
+          "name": "Mini agent execution completed",
+          "nextTask": "d98f861d-9df8-4284-8a79-7d21d42a6a82"
+        }
+      ]
+    },
+    {
+      "_id": "d58c6580-8e6f-4ddb-83b2-5e8650ce5d15",
+      "type": "Workflow",
+      "config": {
+        "name": "Intent - Calculate Insurance Discount",
+        "description": "Workflow for intent - Calculate Insurance Discount",
+        "workflowId": "4e1440c1-6ad3-4cd0-8ff9-41c8f76da803"
+      },
+      "transitions": [
+        {
+          "_id": "d58c6580-8e6f-4ddb-83b2-5e8650ce5d15-d98f861d-9df8-4284-8a79-7d21d42a6a82",
+          "name": "Mini agent execution completed",
+          "nextTask": "d98f861d-9df8-4284-8a79-7d21d42a6a82"
+        }
+      ]
+    },
+    {
+      "_id": "b8e4801a-eaab-40fc-abaa-90a677b46694",
+      "transitions": [
+        {
+          "_id": "b8e4801a-eaab-40fc-abaa-90a677b46694-207ce280-f701-42cb-9026-e16b9399e45e",
+          "name": "If Self Loop",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$agent.selfLoopMiniAgent",
+              "value": "true"
+            }
+          ],
+          "nextTask": "207ce280-f701-42cb-9026-e16b9399e45e"
+        }
+      ],
+      "type": "Output",
+      "config": {
+        "name": "Output",
+        "description": "Output the response to the user",
+        "type": "external",
+        "text": "Unable to complete task $agent.query"
+      }
+    },
+    {
+      "_id": "f00e668d-7a6c-47bf-8cd9-a01229f38cb6",
+      "transitions": [
+        {
+          "_id": "f00e668d-7a6c-47bf-8cd9-a01229f38cb6-207ce280-f701-42cb-9026-e16b9399e45e",
+          "name": "If Self Loop",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$agent.selfLoopMiniAgent",
+              "value": "true"
+            }
+          ],
+          "nextTask": "207ce280-f701-42cb-9026-e16b9399e45e"
+        }
+      ],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "$input.content"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

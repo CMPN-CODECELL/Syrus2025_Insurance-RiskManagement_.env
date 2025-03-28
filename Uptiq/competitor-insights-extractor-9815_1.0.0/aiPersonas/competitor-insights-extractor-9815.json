@@ -1,0 +1,106 @@
+{
+  "_id": "845eea1b-0f4a-4fa9-9871-0d30013d1dcb",
+  "inferenceEngine": {
+    "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b"
+  },
+  "integrationId": "competitor-insights-extractor-9815",
+  "integrations": {},
+  "intentClassification": {
+    "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b"
+  },
+  "name": "Competitor Insights Extractor",
+  "publisherAccountId": "258952ca-ba71-4351-ab37-647c59176875",
+  "status": "Active",
+  "useAsChatbot": true,
+  "variables": {
+    "secrets": [],
+    "agent": [
+      "price"
+    ]
+  },
+  "miniAgentIds": [
+    "35b680f0-d462-49ee-8b8a-caf756d2503e"
+  ],
+  "miniAgents": [
+    {
+      "_id": "35b680f0-d462-49ee-8b8a-caf756d2503e",
+      "integrationId": "web-crawler-insights-2346",
+      "intents": [
+        {
+          "_id": "extract-pricing-information-2346",
+          "name": "Extract Pricing Information",
+          "description": "Gathers and organizes pricing details from competitor websites, including product prices, discounts, and special offers.",
+          "examples": [
+            "What are the current prices of competitor products?",
+            "Find any discounts or promotions on competitor sites.",
+            "List the pricing details of similar products from competitors."
+          ],
+          "flowType": "Workflow",
+          "workflowId": "99a187e1-c602-4126-a3e9-60b713241a61"
+        },
+        {
+          "_id": "extract-product-features-2346",
+          "name": "Extract Product Features",
+          "description": "Collects detailed information about product features and specifications from competitor websites.",
+          "examples": [
+            "What features do competitor products offer?",
+            "List the specifications of similar products from competitors.",
+            "Compare product features between our products and competitors."
+          ],
+          "flowType": "Workflow",
+          "workflowId": "1f76a081-bdb7-444b-b5b9-a8af615ffa0b"
+        },
+        {
+          "_id": "extract-customer-reviews-2346",
+          "name": "Extract Customer Reviews",
+          "description": "Compiles customer reviews and ratings from competitor websites to analyze customer feedback and satisfaction.",
+          "examples": [
+            "What are customers saying about competitor products?",
+            "Summarize the reviews for competitor products.",
+            "How do customers rate competitor products?"
+          ],
+          "flowType": "Workflow",
+          "workflowId": "f10fcbd9-f09e-41f6-975d-2bc95c3c3d10"
+        },
+        {
+          "_id": "extract-promotional-offers-2346",
+          "name": "Extract Promotional Offers",
+          "description": "Identifies and lists any promotional offers or deals available on competitor websites.",
+          "examples": [
+            "Are there any current promotions on competitor sites?",
+            "List the deals available from competitors.",
+            "What special offers are competitors providing?"
+          ],
+          "flowType": "Workflow",
+          "workflowId": "e882fcb5-c03d-456a-a303-28df9d313d41"
+        }
+      ],
+      "name": "Web Crawler Insights",
+      "scope": "Utilizes a web crawler tool to extract and organize insights from competitor websites into a structured table format. This includes gathering data on competitor pricing, product features, customer reviews, and promotional offers.",
+      "miniAgentId": "35b680f0-d462-49ee-8b8a-caf756d2503e"
+    }
+  ],
+  "rags": [],
+  "intentWorkflows": [
+    {
+      "_id": "1f76a081-bdb7-444b-b5b9-a8af615ffa0b",
+      "integrationId": "extract-product-features-3689",
+      "name": "Workflow for Extract Product Features"
+    },
+    {
+      "_id": "99a187e1-c602-4126-a3e9-60b713241a61",
+      "integrationId": "extract-pricing-information-3689",
+      "name": "Workflow for Extract Pricing Information"
+    },
+    {
+      "_id": "e882fcb5-c03d-456a-a303-28df9d313d41",
+      "integrationId": "extract-promotional-offers-3689",
+      "name": "Workflow for Extract Promotional Offers"
+    },
+    {
+      "_id": "f10fcbd9-f09e-41f6-975d-2bc95c3c3d10",
+      "integrationId": "extract-customer-reviews-3689",
+      "name": "Workflow for Extract Customer Reviews"
+    }
+  ]
+}

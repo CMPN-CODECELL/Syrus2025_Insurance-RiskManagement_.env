@@ -1,0 +1,24 @@
+{
+  "_id": "f10fcbd9-f09e-41f6-975d-2bc95c3c3d10",
+  "aiPersonaId": "845eea1b-0f4a-4fa9-9871-0d30013d1dcb",
+  "integrationId": "extract-customer-reviews-3689",
+  "name": "Workflow for Extract Customer Reviews",
+  "publisherAccountId": "258952ca-ba71-4351-ab37-647c59176875",
+  "startTaskId": "bd56698c-8678-4c93-b86c-d6b3603b21e4",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "bd56698c-8678-4c93-b86c-d6b3603b21e4",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

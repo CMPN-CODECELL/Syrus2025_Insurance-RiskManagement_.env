@@ -1,0 +1,24 @@
+{
+  "_id": "7db4346a-25da-451c-8970-b6b7c4771158",
+  "aiPersonaId": "8192d59a-3a33-410d-9f16-9b3935c41661",
+  "integrationId": "evaluate-fitness-level-6479",
+  "name": "Workflow for Evaluate Fitness Level",
+  "publisherAccountId": "258952ca-ba71-4351-ab37-647c59176875",
+  "startTaskId": "34d870e1-a25e-48b3-a5c2-e14955f464fd",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "34d870e1-a25e-48b3-a5c2-e14955f464fd",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

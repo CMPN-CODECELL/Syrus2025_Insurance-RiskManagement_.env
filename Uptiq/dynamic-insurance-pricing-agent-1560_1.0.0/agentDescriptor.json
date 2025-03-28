@@ -1,0 +1,47 @@
+{
+  "aiPersonaIntegrationId": "dynamic-insurance-pricing-agent-1560",
+  "version": "1.0.0",
+  "description": "AI Agent dynamic-insurance-pricing-agent-1560 package version 1.0.0",
+  "data": {
+    "workflows": [
+      [
+        "workflows",
+        "evaluate-fitness-level-6479.json"
+      ],
+      [
+        "workflows",
+        "analyze-medical-history-6479.json"
+      ],
+      [
+        "workflows",
+        "lifestyle-assessment-6479.json"
+      ],
+      [
+        "workflows",
+        "calculate-insurance-discount-6479.json"
+      ],
+      [
+        "workflows",
+        "ma-healthcare-data-analysis-5230-primary-workflow-for-healthcare-data-analysis.json"
+      ]
+    ],
+    "models": [
+      [
+        "models",
+        "azure-gpt-4o-mini.json"
+      ]
+    ],
+    "miniAgents": [
+      [
+        "miniAgents",
+        "healthcare-data-analysis-5230.json"
+      ]
+    ],
+    "aiPersonas": [
+      [
+        "aiPersonas",
+        "dynamic-insurance-pricing-agent-1560.json"
+      ]
+    ]
+  }
+}

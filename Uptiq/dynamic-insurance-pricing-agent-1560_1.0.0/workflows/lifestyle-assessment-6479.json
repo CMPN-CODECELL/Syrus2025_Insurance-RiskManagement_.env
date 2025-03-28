@@ -1,0 +1,24 @@
+{
+  "_id": "55be875d-6ab5-421b-821c-0cc8c2afaaa8",
+  "aiPersonaId": "8192d59a-3a33-410d-9f16-9b3935c41661",
+  "integrationId": "lifestyle-assessment-6479",
+  "name": "Workflow for Lifestyle Assessment",
+  "publisherAccountId": "258952ca-ba71-4351-ab37-647c59176875",
+  "startTaskId": "473a7d27-90e3-4c9f-be3c-81947b90c897",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "473a7d27-90e3-4c9f-be3c-81947b90c897",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}
