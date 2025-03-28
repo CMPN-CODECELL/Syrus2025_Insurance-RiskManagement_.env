@@ -169,7 +169,7 @@ function StatisticsChart() {
 
 function Home() {
   const [alerts, setAlerts] = useState([
-    { event: "Hurricane approaching Patna", policyType: "Auto", affectedCustomers: 2500, previousPremium: "$500", newPremium: "$550" },
+    { event: "Hurricane approaching Pune", policyType: "Auto", affectedCustomers: 2500, previousPremium: "$500", newPremium: "$550" },
     { event: "Health activity increase detected", policyType: "Health", affectedCustomers: 4689, previousPremium: "$400", newPremium: "$380" }
   ]);
   return (
@@ -192,8 +192,8 @@ function Home() {
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-2">Available Insurances</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <InsuranceCard type="Auto Insurances" count="2380 Cars" amount={45789} trend="down" trendAmount="45,789" isDark={true} />
-            <InsuranceCard type="Health Insurances" count="4689 People" amount={145789} trend="up" trendAmount="39,789" />
+            <InsuranceCard type="Auto Insurances" count="7 Properties" amount={45789} trend="down" trendAmount="45,789" isDark={true} />
+            <InsuranceCard type="Health Insurances" count="46 People" amount={145789} trend="up" trendAmount="39,789" />
           </div>
         </div>
         <LiveRiskMonitoring alerts={alerts} />
