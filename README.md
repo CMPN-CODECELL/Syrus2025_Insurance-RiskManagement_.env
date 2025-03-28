@@ -29,10 +29,13 @@
 
 ## 🎯 Why It Was Implemented?
 
-✅ **Demographic-Driven Recommendations** – Expands market reach by personalizing policies based on customer data.  
-✅ **Real-Time Parametric Triggers** – Reduces underwriting risks and enhances customer trust with adaptive pricing.  
-✅ **Autonomous Claims & Fraud Detection** – Improves efficiency, speeds up claims processing, and prevents fraud.  
-✅ **Chatbot for Insights** – Helps insurers make data-driven decisions by forecasting risks and optimizing policy pricing.  
+✅ **Demographic-Driven Recommendations** – Helps insurers tap into new customer segments by offering personalized policies based on age, location, and occupation, leading to increased market reach and customer engagement.
+ 
+✅ **Real-Time Parametric Triggers** –  Ensures adaptive risk management by dynamically adjusting coverage and pricing based on external factors like weather conditions, health metrics, and behavioral patterns, reducing underwriting risks and enhancing customer trust.
+
+✅ **Autonomous Claims & Fraud Detection** – Speeds up claims processing while reducing fraud by cross-checking claims with IRDAI guidelines, ensuring compliance, and providing detailed underwriting summaries for informed decision-making.
+
+✅ **Chatbot for Insights** – Empowers insurers with AI-driven strategic insights, helping them identify underperforming policies, optimize pricing based on market trends, forecast future claims, and enhance risk profiling.
 
 ---
 
