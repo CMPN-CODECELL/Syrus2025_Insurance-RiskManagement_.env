@@ -169,7 +169,7 @@ function StatisticsChart() {
 
 function Home() {
   const [alerts, setAlerts] = useState([
-    { event: "Hurricane approaching Florida", policyType: "Auto", affectedCustomers: 2500, previousPremium: "$500", newPremium: "$550" },
+    { event: "Hurricane approaching Patna", policyType: "Auto", affectedCustomers: 2500, previousPremium: "$500", newPremium: "$550" },
     { event: "Health activity increase detected", policyType: "Health", affectedCustomers: 4689, previousPremium: "$400", newPremium: "$380" }
   ]);
   return (
