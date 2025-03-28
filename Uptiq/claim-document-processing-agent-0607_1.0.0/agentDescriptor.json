@@ -1,0 +1,111 @@
+{
+  "aiPersonaIntegrationId": "claim-document-processing-agent-0607",
+  "version": "1.0.0",
+  "description": "AI Agent claim-document-processing-agent-0607 package version 1.0.0",
+  "data": {
+    "workflows": [
+      [
+        "workflows",
+        "generate-claim-summary-5236.json"
+      ],
+      [
+        "workflows",
+        "make-final-decision-8356.json"
+      ],
+      [
+        "workflows",
+        "ma-document-processing-agent-8715-primary-workflow-for-document-processing-agent.json"
+      ],
+      [
+        "workflows",
+        "classify-document-type-1614.json"
+      ],
+      [
+        "workflows",
+        "detect-missing-documents-0666.json"
+      ],
+      [
+        "workflows",
+        "ma-document-classification-agent-5429-primary-workflow-for-document-classification-agent.json"
+      ],
+      [
+        "workflows",
+        "verify-treatment-consistency-3454.json"
+      ],
+      [
+        "workflows",
+        "detect-unnecessary-treatments-0917.json"
+      ],
+      [
+        "workflows",
+        "ma-medical-consistency-check-agent-3915-primary-workflow-for-medical-consistency-check-agent.json"
+      ],
+      [
+        "workflows",
+        "validate-claim-amount-3269.json"
+      ],
+      [
+        "workflows",
+        "flag-duplicate-charges-9208.json"
+      ],
+      [
+        "workflows",
+        "ma-financial-verification-agent-6936-primary-workflow-for-financial-verification-agent.json"
+      ],
+      [
+        "workflows",
+        "detect-fraudulent-patterns-9042.json"
+      ],
+      [
+        "workflows",
+        "ma-fraud-detection-agent-8019-primary-workflow-for-fraud-detection-agent.json"
+      ],
+      [
+        "workflows",
+        "process-document-upload-2629.json"
+      ],
+      [
+        "workflows",
+        "ma-summary-decision-agent-0103-primary-workflow-for-summary-decision-agent.json"
+      ]
+    ],
+    "models": [
+      [
+        "models",
+        "gpt-4o.json"
+      ]
+    ],
+    "miniAgents": [
+      [
+        "miniAgents",
+        "document-processing-agent-8715.json"
+      ],
+      [
+        "miniAgents",
+        "document-classification-agent-5429.json"
+      ],
+      [
+        "miniAgents",
+        "medical-consistency-check-agent-3915.json"
+      ],
+      [
+        "miniAgents",
+        "financial-verification-agent-6936.json"
+      ],
+      [
+        "miniAgents",
+        "fraud-detection-agent-8019.json"
+      ],
+      [
+        "miniAgents",
+        "summary-decision-agent-0103.json"
+      ]
+    ],
+    "aiPersonas": [
+      [
+        "aiPersonas",
+        "claim-document-processing-agent-0607.json"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "3dce1ebf-0b1c-4195-92c1-acc55fd7d9f5",
+  "aiPersonaId": "0b484d53-b626-4299-89d5-354489aa7aae",
+  "integrationId": "financial-verification-agent-6936",
+  "intentClassification": {
+    "modelId": "gpt-4o"
+  },
+  "name": "Financial Verification Agent",
+  "primaryWorkflowId": "5a3ba19a-bf4b-4da8-80bf-514a0cacde3a",
+  "publisherAccountId": "b01bfb4c-bd4e-481e-bf12-abeaf8cc7e49",
+  "scope": "Checks if the claimed amount aligns with itemized charges. Identifies excessive charges, non-covered expenses, and cost anomalies.",
+  "status": "Active",
+  "intents": [
+    {
+      "_id": "6891c68c-d762-49f9-9c73-241466e7ecd9",
+      "name": "validate_claim_amount",
+      "description": "Detect overpriced treatments or incorrect calculations.",
+      "examples": [
+        ""
+      ],
+      "workflowId": "25e2e800-e90a-4025-bfae-84f622cd7b67",
+      "flowType": "Workflow"
+    },
+    {
+      "_id": "b80a9b70-da6a-4b14-8172-09813ca042d2",
+      "name": "flag_duplicate_charges",
+      "description": "Detect duplicate charges or inflated bills.",
+      "examples": [
+        ""
+      ],
+      "workflowId": "08710117-02c6-4a58-b202-7e6a5251bec2",
+      "flowType": "Workflow"
+    }
+  ]
+}

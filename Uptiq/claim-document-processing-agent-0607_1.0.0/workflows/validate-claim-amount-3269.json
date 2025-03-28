@@ -1,0 +1,24 @@
+{
+  "_id": "25e2e800-e90a-4025-bfae-84f622cd7b67",
+  "aiPersonaId": "0b484d53-b626-4299-89d5-354489aa7aae",
+  "integrationId": "validate-claim-amount-3269",
+  "name": "Workflow for validate_claim_amount",
+  "publisherAccountId": "b01bfb4c-bd4e-481e-bf12-abeaf8cc7e49",
+  "startTaskId": "e9e87a93-e556-4850-aa4d-a3932f4018e8",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "e9e87a93-e556-4850-aa4d-a3932f4018e8",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

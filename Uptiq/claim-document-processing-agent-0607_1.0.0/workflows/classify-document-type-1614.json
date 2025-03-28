@@ -1,0 +1,24 @@
+{
+  "_id": "7c46dd87-8d8b-473a-baad-214e03e6f074",
+  "aiPersonaId": "0b484d53-b626-4299-89d5-354489aa7aae",
+  "integrationId": "classify-document-type-1614",
+  "name": "Workflow for classify_document_type",
+  "publisherAccountId": "b01bfb4c-bd4e-481e-bf12-abeaf8cc7e49",
+  "startTaskId": "de941f9f-c087-4fb8-b8eb-1d5805e9ec66",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "de941f9f-c087-4fb8-b8eb-1d5805e9ec66",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

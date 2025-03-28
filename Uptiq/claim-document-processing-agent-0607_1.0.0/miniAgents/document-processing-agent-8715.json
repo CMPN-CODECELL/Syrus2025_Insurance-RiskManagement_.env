@@ -1,0 +1,35 @@
+{
+  "_id": "970b2026-1b05-4bcd-b856-26832bb6b0e1",
+  "aiPersonaId": "0b484d53-b626-4299-89d5-354489aa7aae",
+  "integrationId": "document-processing-agent-8715",
+  "intentClassification": {
+    "modelId": "gpt-4o"
+  },
+  "name": "Document processing Agent",
+  "primaryWorkflowId": "45117cac-6a95-4974-8728-59719e820737",
+  "publisherAccountId": "b01bfb4c-bd4e-481e-bf12-abeaf8cc7e49",
+  "scope": "Accepts claim documents. Converts PDFs to images. Extract text from the images, Cleans and structures extracted text.",
+  "status": "Active",
+  "intents": [
+    {
+      "_id": "8461f44c-3b7f-4b50-841a-b96866bcddfd",
+      "name": "generate_claim_summary",
+      "description": "Provide a structured summary of the claim, including findings from all previous sub-agents.",
+      "examples": [
+        ""
+      ],
+      "workflowId": "f333d26b-a95a-4872-9c81-19d2428d03b1",
+      "flowType": "Workflow"
+    },
+    {
+      "_id": "8fd78efd-5b64-4544-b346-9efbf8256986",
+      "name": "make_final_decision",
+      "description": "Approve, reject, or escalate the claim based on combined analysis.",
+      "examples": [
+        ""
+      ],
+      "workflowId": "9f8e18b5-6fec-409e-9301-aec26c7dba53",
+      "flowType": "Workflow"
+    }
+  ]
+}
