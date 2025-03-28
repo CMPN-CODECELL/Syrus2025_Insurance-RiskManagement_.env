@@ -29,9 +29,26 @@ Real-Time Parametric Triggers – Ensures adaptive risk management by dynamicall
 Autonomous Claims & Fraud Detection – Speeds up claims processing while reducing fraud by cross-checking claims with IRDAI guidelines, ensuring compliance, and providing detailed underwriting summaries for informed decision-making.
 
 Chatbot for Insights – Empowers insurers with AI-driven strategic insights, helping them identify underperforming policies, optimize pricing based on market trends, forecast future claims, and enhance risk profiling.
+# Project Screenshots
 
-How it was implemented ?
-![App Screenshot](screenshots/Flowchart (1).png)
+## 📌 Flowchart
+![Flowchart](screenshots/Flowchart%20(1).png)
+
+## 💰 Pricing
+![Pricing](screenshots/Pricing.jpg)
+
+## 📊 RAG Analysis 1
+![RAG1](screenshots/RAG1.jpg)
+
+## 📊 RAG Analysis 2
+![RAG2](screenshots/RAG2.jpg)
+
+## 🔍 Competitor Analysis
+![Competitor](screenshots/competitor.jpg)
+
+## ⚙️ Processing
+![Processing](screenshots/processing.jpg)
+
 
 
 - Tech stack used
