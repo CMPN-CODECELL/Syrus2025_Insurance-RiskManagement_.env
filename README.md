@@ -31,6 +31,7 @@ Autonomous Claims & Fraud Detection – Speeds up claims processing while reduci
 Chatbot for Insights – Empowers insurers with AI-driven strategic insights, helping them identify underperforming policies, optimize pricing based on market trends, forecast future claims, and enhance risk profiling.
 
 How it was implemented ?
+![App Screenshot](screenshots/Flowchart (1).png)
 
 
 - Tech stack used
