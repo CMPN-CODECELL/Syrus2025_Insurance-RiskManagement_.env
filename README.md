@@ -1,7 +1,7 @@
 # 🚀 InsurAI
 ## [📄 Document with uptiq screenshots ](https://docs.google.com/document/d/1fPQrNFWIAjhBeFarG0BE8zfYT74VIS0f_JlihpdfmYo/edit?usp=sharing)  
 ## [Video Link](https://youtu.be/F7vaE0me3tg)
-
+##[PPT](https://docs.google.com/presentation/d/1gSInuRIeN_X7clZyrj_Yzn-mXqxgD-POh8xuGPfWN8k/edit?slide=id.g33e20550fab_1_0#slide=id.g33e20550fab_1_0)
 ## [If video not accessible : ](https://drive.google.com/drive/u/0/folders/1vGEozSQ5H-qEJSH47x5aP9WE9Q571eeG)
 ## 📌 Key Features
 
