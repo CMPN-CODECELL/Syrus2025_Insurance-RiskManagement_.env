@@ -1,5 +1,6 @@
 # 🚀 InsurAI
-
+## [📄 Document with uptiq screenshots ](https://docs.google.com/document/d/1fPQrNFWIAjhBeFarG0BE8zfYT74VIS0f_JlihpdfmYo/edit?usp=sharing)  
+## [Video Link](https://youtu.be/F7vaE0me3tg)
 ## 📌 Key Features
 
 ### 1️⃣ Demographic-Driven Recommendations  
@@ -85,6 +86,3 @@
 ## Changes after Mentor Suggestions : 
 
  Implemented RAG for health premium adjustment based on health data .
-
-[📄 Document with uptiq screenshots ](https://docs.google.com/document/d/1fPQrNFWIAjhBeFarG0BE8zfYT74VIS0f_JlihpdfmYo/edit?usp=sharing)  
-[Video Link](https://drive.google.com/drive/u/0/folders/1vGEozSQ5H-qEJSH47x5aP9WE9Q571eeG)
