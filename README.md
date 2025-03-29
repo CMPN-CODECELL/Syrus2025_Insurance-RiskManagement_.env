@@ -79,7 +79,7 @@
 ![Competitor](screenshots/competitor.jpg)  
 
 ### ⚙️ Claim Processing  
-![Processing](screenshots/processing.jpg)  
+![Processing](screenshots/claim_processing_output.jpg)  
 
 ---
 ## Changes after Mentor Suggestions : 
