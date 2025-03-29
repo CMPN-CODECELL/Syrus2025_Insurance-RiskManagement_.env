@@ -85,3 +85,5 @@
 ## Changes after Mentor Suggestions : 
 
  Implemented RAG for health premium adjustment based on health data .
+
+[📄 View ](https://docs.google.com/document/d/1fPQrNFWIAjhBeFarG0BE8zfYT74VIS0f_JlihpdfmYo/edit?usp=sharing)  
